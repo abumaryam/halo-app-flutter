@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 // import 'package:haloapp/main.dart';
-import 'package:haloapp/ui/HaloApp.dart';
+import 'package:haloapp/ui/haloapp.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
