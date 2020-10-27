@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haloapp/component/item_kontak.dart';
 
 class HaloApp extends StatelessWidget {
   @override
@@ -7,7 +8,9 @@ class HaloApp extends StatelessWidget {
       title: "Pertama",
       home: Scaffold(
         appBar: AppBar(title: Text('HaloApp')),
-        body: Center(child: Text('Halo Semuanya')),
+        body: Row(
+          children: <Widget>[ItemKontak()],
+        ),
       ),
     );
   }
