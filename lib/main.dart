@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'ui/haloapp.dart';
+import 'ui/halo_state.dart';
 
+// ini komentar
 void main() {
-  runApp(HaloApp());
+  runApp(HaloState());
 }
