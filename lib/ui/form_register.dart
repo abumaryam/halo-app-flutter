@@ -7,12 +7,20 @@ class FormRegister extends StatefulWidget {
 
 class _FormRegisterState extends State<FormRegister> {
   var _username = "username";
+  var _jk = "";
+
   final usernameController = TextEditingController();
 
   void gantiText() {
     debugPrint(usernameController.text);
     setState(() {
       this._username = usernameController.text;
+    });
+  }
+
+  void _pilihjk(String value) {
+    setState(() {
+      _jk = value;
     });
   }
 
@@ -31,11 +39,27 @@ class _FormRegisterState extends State<FormRegister> {
                 TextField(
                   controller: usernameController,
                 ),
+                RadioListTile(
+                    value: "L",
+                    title: Text('Laki-laki'),
+                    groupValue: _jk,
+                    onChanged: (String value) {
+                      debugPrint('Anda memilih $value');
+                      _pilihjk(value);
+                    }),
+                RadioListTile(
+                    value: "P",
+                    title: Text('Perempuan'),
+                    groupValue: _jk,
+                    onChanged: (String value) {
+                      debugPrint('Anda memilih $value');
+                      _pilihjk(value);
+                    }),
                 RaisedButton(
                   onPressed: gantiText,
                   child: Text('Daftar'),
                 ),
-                Text(_username),
+                Text(_username + " " + _jk),
               ],
             ),
           ),
